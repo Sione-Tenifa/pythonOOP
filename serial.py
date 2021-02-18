@@ -21,8 +21,18 @@ class SerialGenerator:
     100
     """
     print("working")
-    def __init__(self, num):
+
+    def __init__(self, num=0):
         self.num = num
-        
+        self.serial = num
+
     def number(self):
         print(self.num)
+
+    def generate(self):
+        
+        self.serial += 1
+        return self.serial 
+
+    def reset(self): 
+        self.serial = self.num
